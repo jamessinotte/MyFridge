@@ -1,0 +1,6 @@
+[submodule "myfridge-app"]
+	path = myfridge-app
+	url = /myfridge-app
+[submodule "MyFridge"]
+	path = MyFridge
+	url=  /MyFridge
