@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config()
-const MONGODB_URI='mongodb+srv://jamessinotte:Pygmy123@myfridge.hjftpuj.mongodb.net/?retryWrites=true&w=majority&appName=MyFridge';
+
 var number = require('random-number');
 const { isBooleanObject } = require('util/types');
 let options = {
@@ -10,7 +10,7 @@ let options = {
 
 
 }
-mongoose.connect(MONGODB_URI)
+
 
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
@@ -28,7 +28,7 @@ const User = mongoose.model('User', userSchema);
 
  async function createUser(email, password,name) {
     let userNumber = Math.floor(number(options))
-    let recipes = {'name': 0}
+    let recipes = {recipes: []}
     let ingredients_use = {'made':false,'ingredients':[],}
     let ingredients_weight = {'name':0}
     let restrictions = {diets:[],
@@ -47,6 +47,18 @@ const User = mongoose.model('User', userSchema);
     const user = await User.findOne({ userNumber });
     return user;
   }
+  async function addRecipe(userNumber,recipe) {
+    try {
+      const user = await User.findOne({userNumber})
+      user.recipes.recipes.push(recipe)
+      user.markModified('recipes')
+      user.save()
+    }
+    catch(error){
+      console.error('failed to add recipe',error)
+    }
+  }
+
 
   async function editUserRestrictions(userNumber,diet,allergies) {
     try {
@@ -98,6 +110,7 @@ module.exports = {
   editUserRestrictions,
   findUserByID,
   editUserFridge,
+  addRecipe,
 
 };
 

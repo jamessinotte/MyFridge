@@ -1,14 +1,16 @@
-const express = require('express');
 const mongoose = require('mongoose');
+const express = require('express');
 const bcrypt = require('bcryptjs');
+require('dotenv').config({ path: 'info.env' });
+const mongoose_uri= process.env.mongoose_uri;
 const path = require('path');
-const {createUser, findUserByEmail,editUserRestrictions,findUserByID,editUserFridge} = require('./models/Users');
+const {createUser, findUserByEmail,editUserRestrictions,findUserByID,editUserFridge,addRecipe} = require('./models/Users');
 const app = express();
 const bodyParser = require('body-parser')
 const router = express.Router();
 const cors = require('cors');
 require('dotenv').config();
-
+mongoose.connect(mongoose_uri)
 app.use(cors({
   origin: '*', // For development only; specify your frontend's URL in production
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
@@ -16,7 +18,6 @@ app.use(cors({
 }));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
-mongoose.connect('mongodb+srv://jamessinotte:Pygmy123@myfridge.hjftpuj.mongodb.net/?retryWrites=true&w=majority&appName=MyFridge')
 app.post('/Signin', async (req, res) => {
   console.log("Signin Hit")
   const { email, password } = req.body;
@@ -44,6 +45,19 @@ app.use((req, res, next) => {
     console.log(`[LOG] Incoming request: ${req.method} ${req.url}`);
     next();
 });
+app.post(`/RecipeBuilder/:userNumber`, async (req,res) => {
+      try {
+      const {recipe} = req.body
+      const {userNumber} = req.params
+      await addRecipe(userNumber,recipe)
+      }
+      catch(error) {
+        console.error('Error saving Recipe',error)
+      }
+      res.send("Saved Recipe");
+      
+
+})
 app.post('/Signup', async (req,res) => {
     console.log('[LoG] /api/Signup route hit');
     try {
@@ -85,7 +99,7 @@ app.post(`/FridgeHome/:userNumber`, async (req,res) => {
     console.log('Error in restriction list update',error)
 }})
 app.get(`/Food`,(req,res) => {
-  res.sendFile(__dirname + '/models/Food.json');
+  res.sendFile(__dirname + '/models/csvjson.json');
 })
 
 app.post(`/Fridge/:userNumber`, async (req,res) => {
@@ -115,7 +129,7 @@ app.use(express.static(path.join(__dirname, '../myfridge-app/dist')));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../myfridge-app/dist', 'index.html'));
 });
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 10000;
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
