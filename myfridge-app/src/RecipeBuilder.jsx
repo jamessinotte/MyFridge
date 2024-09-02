@@ -4,7 +4,8 @@ import {userData} from './Signin.js'
 import styles from'./RecipeBuilder.module.css'
 import axios from 'axios'
 require('dotenv').config({ path: 'info.env' });
-const key = process.env.key
+const key = process.env.REACT_APP_SPOONACULAR_KEY;
+console.log('API Key:', process.env.REACT_APP_SPOONACULAR_KEY);
 
 class RecipeBuilder extends Component {
     constructor() {
