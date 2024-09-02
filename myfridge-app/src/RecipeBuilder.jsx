@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import {userData} from './Signin.js'
 import styles from'./RecipeBuilder.module.css'
 import axios from 'axios'
-require('dotenv').config({ path: 'info.env' });
-const key = process.env.REACT_APP_SPOONACULAR_KEY;
-console.log('API Key:', process.env.REACT_APP_SPOONACULAR_KEY);
+require('dotenv').config();
 
 class RecipeBuilder extends Component {
     constructor() {
@@ -55,7 +53,8 @@ class RecipeBuilder extends Component {
         
     }
     searchRecipe = async () => { 
-        
+        console.log('API Key:', process.env.REACT_APP_SPOONACULAR_KEY);
+        const key = process.env.REACT_APP_SPOONACULAR_KEY;
         let ingredientsUse = ''
         let ingredientsExcluded = ''
         this.state.ingredientsInFridge.forEach(item =>{
@@ -93,7 +92,8 @@ class RecipeBuilder extends Component {
         })
     }
     searchRecipeAPI = async (diet,intolerances,includeIngredients,excludeIngredients) => {
-    
+            console.log('API Key:', process.env.REACT_APP_SPOONACULAR_KEY);
+            const key = process.env.REACT_APP_SPOONACULAR_KEY;
             const params = new URLSearchParams({
                 ingredients: includeIngredients,
                 apiKey: key,
@@ -153,6 +153,7 @@ class RecipeBuilder extends Component {
 
     }
     nextRecipe = async() => {
+        const key = process.env.REACT_APP_SPOONACULAR_KEY;
         let index = this.state.recipeNumber + 1
         let recipe = this.state.recipes[index]
         const id = recipe.id

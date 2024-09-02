@@ -130,7 +130,6 @@ class Signup extends _react.Component {
       showInput: true,
       showPasswordError: false,
       errorMessage: '',
-      // State variable for error message
       Signedup: false
     };
   }

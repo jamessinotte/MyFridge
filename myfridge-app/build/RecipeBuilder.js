@@ -15,10 +15,7 @@ function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; 
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-require('dotenv').config({
-  path: 'info.env'
-});
-const key = process.env.key;
+require('dotenv').config();
 class RecipeBuilder extends _react.Component {
   constructor() {
     super();
@@ -30,6 +27,8 @@ class RecipeBuilder extends _react.Component {
       });
     });
     _defineProperty(this, "searchRecipe", async () => {
+      console.log('API Key:', process.env.REACT_APP_SPOONACULAR_KEY);
+      const key = process.env.REACT_APP_SPOONACULAR_KEY;
       let ingredientsUse = '';
       let ingredientsExcluded = '';
       this.state.ingredientsInFridge.forEach(item => {
@@ -70,6 +69,8 @@ class RecipeBuilder extends _react.Component {
       });
     });
     _defineProperty(this, "searchRecipeAPI", async (diet, intolerances, includeIngredients, excludeIngredients) => {
+      console.log('API Key:', process.env.REACT_APP_SPOONACULAR_KEY);
+      const key = process.env.REACT_APP_SPOONACULAR_KEY;
       const params = new URLSearchParams({
         ingredients: includeIngredients,
         apiKey: key,
@@ -122,6 +123,7 @@ class RecipeBuilder extends _react.Component {
       });
     });
     _defineProperty(this, "nextRecipe", async () => {
+      const key = process.env.REACT_APP_SPOONACULAR_KEY;
       let index = this.state.recipeNumber + 1;
       let recipe = this.state.recipes[index];
       const id = recipe.id;
