@@ -1,0 +1,737 @@
+@keyframes QkLjWG_slideInTitle {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes QkLjWG_fadeInButton {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.QkLjWG_Home1 {
+  background: linear-gradient(90deg, #87ceeb 0%, #78d3f7 50%);
+  border: 0;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+  font-weight: bold;
+  display: flex;
+}
+
+.QkLjWG_Title {
+  color: #fff;
+  font-size: 4em;
+  animation: 1s ease-out forwards QkLjWG_slideInTitle;
+}
+
+.QkLjWG_getStarted {
+  box-sizing: border-box;
+  color: #87ceeb;
+  text-align: center;
+  opacity: 0;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 2em;
+  margin: 0 .3em .3em 0;
+  padding: .3em 1.2em;
+  font-size: 3em;
+  text-decoration: none;
+  transition: all .2s;
+  animation: 1s ease-out 1s forwards QkLjWG_fadeInButton;
+  display: inline-block;
+}
+
+.QkLjWG_getStarted:hover {
+  background-color: #f5f5f5;
+  border-color: #fff;
+}
+
+.IVR1tq_Signin {
+  background: linear-gradient(90deg, #87ceeb 0%, #78d3f7 50%);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Roboto, sans-serif;
+  display: flex;
+}
+
+.IVR1tq_Form {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  width: 380px;
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: 0 4px 15px #0000001a;
+}
+
+.IVR1tq_Title {
+  color: #444;
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.IVR1tq_Heading {
+  color: #666;
+  margin-bottom: 25px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.IVR1tq_Inputs {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 25px;
+  display: flex;
+}
+
+.IVR1tq_emailBox, .IVR1tq_passwordBox {
+  box-sizing: border-box;
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+}
+
+.IVR1tq_Submit {
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  background: #87ceeb;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  transition: background .3s;
+}
+
+.IVR1tq_Submit:hover, .IVR1tq_Submit:active, .IVR1tq_Submit:focus {
+  background: #6cc5e9;
+}
+
+.IVR1tq_Signup {
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  display: flex;
+}
+
+.IVR1tq_SignupText, .IVR1tq_SignupLink {
+  color: #87ceeb;
+  font-size: .9em;
+}
+
+.IVR1tq_SignupLink {
+  margin-left: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.IVR1tq_SignupLink:hover {
+  text-decoration: underline;
+}
+
+.IVR1tq_ErrorMessage {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+._809RIa_Signup {
+  background: linear-gradient(90deg, #87ceeb 0%, #78d3f7 50%);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+._809RIa_SignupForm {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  padding: 40px;
+  display: flex;
+  box-shadow: 0 4px 15px #0000001a;
+}
+
+._809RIa_SignupInputs {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+}
+
+._809RIa_emailBox, ._809RIa_passwordBox, ._809RIa_confirmPasswordBox, ._809RIa_nameBox {
+  background: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+._809RIa_Submit {
+  color: #fff;
+  cursor: pointer;
+  background: #87ceeb;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  transition: background .3s;
+}
+
+._809RIa_Submit:hover {
+  background: #6cc5e9;
+}
+
+._809RIa_invalidPassword {
+  color: red;
+  font-size: 16px;
+}
+
+._809RIa_Link {
+  color: #87ceeb;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.NgfSsq_FridgeHome {
+  color: #fff;
+  background: linear-gradient(90deg, #87ceeb 0%, #78d3f7 50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.NgfSsq_Title, .NgfSsq_headingFridge, .NgfSsq_headingRecipe {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.NgfSsq_options {
+  justify-content: space-around;
+  width: 100%;
+  display: flex;
+}
+
+.NgfSsq_dietArea, .NgfSsq_allergyArea {
+  color: #000;
+  background-color: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  flex: 1;
+  min-width: 30vw;
+  height: 60vh;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  overflow-y: auto;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.NgfSsq_cbx {
+  cursor: pointer;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #c8ccd4;
+  border-radius: 3px;
+  width: 27px;
+  height: 27px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.NgfSsq_cbx:checked {
+  background-color: #87ceeb;
+}
+
+.NgfSsq_cbx:after {
+  content: "";
+  opacity: 0;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  width: 7px;
+  height: 14px;
+  transition: opacity .3s, transform .3s;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  transform: rotate(45deg)scale(0);
+}
+
+.NgfSsq_cbx:checked:after {
+  opacity: 1;
+  transform: rotate(45deg)scale(1);
+}
+
+.NgfSsq_dietlabel, .NgfSsq_allergylabel {
+  flex: 1;
+  align-items: center;
+  font-size: 16px;
+  display: flex;
+}
+
+.NgfSsq_links {
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+}
+
+.NgfSsq_buttons {
+  color: #87ceeb;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.NgfSsq_buttons:hover {
+  background-color: #f5f5f5;
+}
+
+.NgfSsq_lbl {
+  cursor: pointer;
+  flex: 1;
+  align-items: center;
+  display: flex;
+}
+
+.NgfSsq_allergy, .NgfSsq_diet {
+  flex-direction: row;
+  align-items: center;
+  padding-top: 2vh;
+  display: flex;
+}
+
+.NgfSsq_ErrorMessage {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.ReactVirtualized__Table__headerRow {
+  text-transform: uppercase;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700;
+  display: flex;
+}
+
+.ReactVirtualized__Table__row {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.ReactVirtualized__Table__headerTruncatedText {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ReactVirtualized__Table__headerColumn, .ReactVirtualized__Table__rowColumn {
+  min-width: 0;
+  margin-right: 10px;
+}
+
+.ReactVirtualized__Table__rowColumn {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ReactVirtualized__Table__headerColumn:first-of-type, .ReactVirtualized__Table__rowColumn:first-of-type {
+  margin-left: 10px;
+}
+
+.ReactVirtualized__Table__sortableHeaderColumn {
+  cursor: pointer;
+}
+
+.ReactVirtualized__Table__sortableHeaderIconContainer {
+  align-items: center;
+  display: flex;
+}
+
+.ReactVirtualized__Table__sortableHeaderIcon {
+  fill: currentColor;
+  flex: 0 0 24px;
+  width: 1em;
+  height: 1em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.BivMPa_Fridge {
+  color: #fff;
+  background: linear-gradient(135deg, #87ceeb 0%, #50b7f5 100%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+}
+
+.BivMPa_FridgeHeadings {
+  text-align: center;
+  width: 100%;
+}
+
+.BivMPa_FridgeWelcome {
+  color: #fff;
+  margin-bottom: 1vh;
+  font-size: calc(1.5em + 1vw);
+  font-weight: bold;
+}
+
+.BivMPa_FridgeHeading {
+  color: #fff;
+  margin-bottom: 2vh;
+  font-size: calc(1em + 1vw);
+  font-weight: bold;
+}
+
+.BivMPa_Items {
+  background-color: #fffffff2;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.BivMPa_itemArea {
+  color: #000;
+  background-color: #0000;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: calc(33.3333% - 20px);
+  margin: 10px;
+  padding: 20px;
+  transition: transform .3s ease-in-out;
+  display: flex;
+}
+
+.BivMPa_itemArea:hover {
+  transform: translateY(-5px);
+}
+
+.BivMPa_itemFridge {
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color .3s, transform .2s;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.BivMPa_itemFridge:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.05);
+}
+
+.BivMPa_addFridge {
+  color: #000;
+  background-color: #fff;
+  border-radius: 8px;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.BivMPa_Form {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.BivMPa_Select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.BivMPa_SubmitFridge {
+  color: #fff;
+  cursor: pointer;
+  background-color: #50b7f5;
+  border: none;
+  border-radius: 5px;
+  width: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.BivMPa_SubmitFridge:hover {
+  background-color: #50b7f5;
+  transform: scale(1.05);
+}
+
+.BivMPa_FridgeHomeButtonContainer {
+  justify-content: center;
+  margin-top: 20px;
+  display: flex;
+}
+
+.BivMPa_FridgeHomeButton {
+  color: #50b7f5;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #50b7f5;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color .3s, transform .2s;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.BivMPa_FridgeHomeButton:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.05);
+}
+
+.aMo7ZG_main {
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #87ceeb 0%, #50b7f5 100%);
+  flex-direction: column;
+  align-items: center;
+  width: 75vw;
+  height: 100vh;
+  margin-right: 25vw;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  overflow-y: auto;
+}
+
+#aMo7ZG_Welcome_MyFridge {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.aMo7ZG_main h1 {
+  color: #fff;
+}
+
+.aMo7ZG_buttons {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+button {
+  color: #50b7f5;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color .3s, transform .2s;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+button:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.05);
+}
+
+.aMo7ZG_searchButton {
+  margin-top: 20px;
+}
+
+.aMo7ZG_ingredientList, .aMo7ZG_instructionsList, .aMo7ZG_nutritionList {
+  color: #fff;
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.aMo7ZG_Nutrition h1, .aMo7ZG_Nutrition h3, .aMo7ZG_Nutrition h4 {
+  color: #fff;
+  font-family: Roboto\, sans-serif;
+}
+
+.aMo7ZG_RecipeHeading {
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.aMo7ZG_savedRecipes {
+  z-index: 1000;
+  color: #000;
+  background-color: #fffffff2;
+  border-left: 1px solid #ddd;
+  width: 25vw;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.aMo7ZG_SavedRecipes {
+  margin-bottom: 15px;
+}
+
+.aMo7ZG_savedRecipes h1 {
+  color: #50b7f5;
+}
+
+.aMo7ZG_Recipe {
+  color: #50b7f5;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid #50b7f5;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 1.1em;
+  transition: color .3s;
+}
+
+.aMo7ZG_Date {
+  color: #50b7f5;
+  text-align: center;
+  font-size: .9em;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+@media (width <= 768px) {
+  .aMo7ZG_main {
+    width: 100%;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .aMo7ZG_savedRecipes {
+    box-shadow: none;
+    border-left: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+.aMo7ZG_FridgeHomeButton {
+  color: #50b7f5;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #50b7f5;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color .3s, transform .2s;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.aMo7ZG_FridgeHomeButton:hover {
+  transform: scale(1.05);
+}
+/*# sourceMappingURL=index.db9ed22c.css.map */

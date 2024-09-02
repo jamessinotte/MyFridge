@@ -1,0 +1,158 @@
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 75vw;
+    background: linear-gradient(135deg, #87ceeb 0%, #50b7f5 100%);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 25vw; 
+    overflow-y: auto; 
+    position: relative
+}
+
+
+#Welcome_MyFridge {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main h1 {
+    color: white;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 18px;
+    color: #50b7f5; 
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #f0f8ff;
+    transform: scale(1.05);
+}
+
+.searchButton {
+    margin-top: 20px;
+}
+.ingredientList, .instructionsList, .nutritionList {
+    font-size: 2rem;
+    line-height: 1.6;
+    padding-left: 20px;
+    margin: 10px 0;
+    color: white;
+    
+}
+.Nutrition h1, .Nutrition h3, .Nutrition h4 {
+    color: white;
+    font-family: 'Roboto, sans-serif';
+}
+.RecipeHeading {
+    color: white; 
+    font-size: 2em; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    padding: 10px; 
+    border-radius: 8px; 
+}
+
+
+.savedRecipes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25vw; 
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+    color: black;
+    border-left: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.SavedRecipes {
+    margin-bottom: 15px;
+    
+}
+.savedRecipes h1 {
+    color: #50b7f5;
+}
+
+.Recipe {
+    color: #50b7f5;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border: 2px solid #50b7f5;
+    border-radius: 4px;
+    padding: 8px;
+    text-align: center;
+}
+
+
+.Date {
+    font-size: 0.9em;
+    color:  #50b7f5;
+    text-align: center;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .main {
+        width: 100%;
+        padding: 10px;
+        margin-right: 0; 
+    }
+
+    .savedRecipes {
+        width: 100%;
+        position: relative;
+        height: auto;
+        border-left: none;
+        box-shadow: none;
+    }
+}
+.FridgeHomeButton {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #50b7f5;
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #50b7f5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.FridgeHomeButton:hover {
+    transform: scale(1.05);
+}

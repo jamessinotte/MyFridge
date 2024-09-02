@@ -1,0 +1,66 @@
+@keyframes slideInTitle {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for the button fading in */
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Home1 {
+    background: linear-gradient(90deg, skyblue 0%, rgb(120, 211, 247) 50%);
+    font-family: Verdana;
+    font-weight: bold;
+    flex-direction: column;
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    justify-content: space-around
+}
+
+.Title {
+    color: white;
+    font-size: 4em;
+    animation: slideInTitle 1s ease-out forwards;
+}
+
+.getStarted {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border: 2px solid white;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 3em;
+    color: skyblue;
+    background-color: white;
+    text-align: center;
+    transition: all 0.2s;
+    opacity: 0; 
+    animation: fadeInButton 1s ease-out forwards 1s; 
+}
+
+.getStarted:hover {
+    background-color: whitesmoke;
+    border-color: white;
+}

@@ -1,0 +1,160 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.Fridge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #87ceeb 0%, #50b7f5 100%);
+    padding: 20px;
+    color: white;
+}
+
+
+.FridgeHeadings {
+    text-align: center;
+    width: 100%;
+}
+
+.FridgeWelcome {
+    font-size: calc(1.5em + 1vw); 
+    margin-bottom: 1vh;
+    font-weight: bold;
+    color: white;
+}
+
+.FridgeHeading {
+    font-size: calc(1em + 1vw);
+    margin-bottom: 2vh;
+    font-weight: bold;
+    color: white;
+}
+
+
+.Items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.itemArea {
+    background-color: transparent;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: calc(100% / 3 - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.itemArea:hover {
+    transform: translateY(-5px); 
+}
+
+
+.itemFridge {
+    background-color: white;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.itemFridge:hover {
+    background-color: #f0f8ff;
+    transform: scale(1.05);
+}
+
+
+.addFridge {
+    width: 100%;
+    padding: 20px;
+    background-color: white; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    color: black;
+    flex-direction: column;
+}
+
+
+.Form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Select {
+    width: 100%; 
+    margin-bottom: 10px;
+}
+
+.SubmitFridge {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #50b7f5; 
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.SubmitFridge:hover {
+    transform: scale(1.05);
+    background-color: #50b7f5;
+    
+}
+
+
+.FridgeHomeButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.FridgeHomeButton {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #50b7f5;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid #50b7f5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.FridgeHomeButton:hover {
+    background-color: #f0f8ff;
+    transform: scale(1.05);
+}
