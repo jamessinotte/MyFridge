@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "concurrently": "^8.2.2",
     "git": "^0.1.5"
   }
+  
+  
 }
